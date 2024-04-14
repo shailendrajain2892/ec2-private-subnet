@@ -1,4 +1,5 @@
 #!/bin/bash
 sudo apt update -y &&
 sudo apt install -y nginx
-echo "Hello Nginx Demo" > /var/www/html/index.html
+host_ip=`hostname -i | cut -d " " -f 1`
+echo "Hello Nginx Demo from host : $host_ip" > /var/www/html/index.html
