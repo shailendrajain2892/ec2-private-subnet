@@ -26,7 +26,7 @@ variable "webserver_sg_rules" {
         from_port   = 22
         to_port     = 22
         protocol    = "tcp"
-        cidr_blocks = ["147.161.166.209/32"] # <- replace with your own workstation IP
+        cidr_blocks = ["0.0.0.0/0"] # <- replace with your own workstation IP
       },
       {
         description = "80 from public subnets (ALB)"
@@ -57,6 +57,11 @@ variable "key_name" {
 }
 
 variable "availability_zone" {
-  type = list(string)
-  default = [ "us-east-1a", "us-east-1b" ]
+  type    = list(string)
+  default = ["us-east-1a", "us-east-1b"]
+}
+
+variable "instance_count" {
+  type    = number
+  default = 2
 }
