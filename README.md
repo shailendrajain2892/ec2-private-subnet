@@ -19,5 +19,5 @@ Ec2 deployed in private subnet in multi availability zone with ASG and ALB
 └── variables.tf
 ```
 
-# Terraform Graph 
+# Terraform Graph for this repo using site :  https://edotor.net and command terraform graph 
 ![Alt text](image.png)
