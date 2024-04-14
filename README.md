@@ -18,3 +18,6 @@ Ec2 deployed in private subnet in multi availability zone with ASG and ALB
 ├── terraform.tfvars
 └── variables.tf
 ```
+
+# Terraform Graph 
+![Alt text](image.png)
