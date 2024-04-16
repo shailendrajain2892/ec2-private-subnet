@@ -20,6 +20,6 @@ output "web_app_wait_command" {
   description = "Test command - tests readiness of the web app"
 }
 
-output Bastion_IP {
-    value = aws_instance.BastionHost.public_ip
+output "Bastion_IP" {
+  value = aws_instance.BastionHost.public_ip
 }

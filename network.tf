@@ -90,10 +90,10 @@ resource "aws_route_table" "privateRouteTable" {
 }
 
 resource "aws_route" "private_nat_gateway" {
-  count = length(var.availability_zone)
-  route_table_id = element(aws_route_table.privateRouteTable.*.id, count.index)
+  count                  = length(var.availability_zone)
+  route_table_id         = element(aws_route_table.privateRouteTable.*.id, count.index)
   destination_cidr_block = "0.0.0.0/0"
-  nat_gateway_id = element(aws_nat_gateway.ngw.*.id, count.index)
+  nat_gateway_id         = element(aws_nat_gateway.ngw.*.id, count.index)
 }
 
 
